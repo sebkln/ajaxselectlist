@@ -1,15 +1,11 @@
 
 plugin.tx_ajaxselectlist_selectlist {
-	view {
-		# cat=plugin.tx_ajaxselectlist_selectlist/file; type=string; label=Path to template root (FE)
-		templateRootPath = EXT:ajaxselectlist/Resources/Private/Templates/
-		# cat=plugin.tx_ajaxselectlist_selectlist/file; type=string; label=Path to template partials (FE)
-		partialRootPath = EXT:ajaxselectlist/Resources/Private/Partials/
-		# cat=plugin.tx_ajaxselectlist_selectlist/file; type=string; label=Path to template layouts (FE)
-		layoutRootPath = EXT:ajaxselectlist/Resources/Private/Layouts/
-	}
-	persistence {
-		# cat=plugin.tx_ajaxselectlist_selectlist//a; type=string; label=Default storage PID
-		storagePid =
-	}
+    view {
+        # cat=plugin.tx_ajaxselectlist_selectlist/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:ajaxselectlist/Resources/Private/Templates/
+        # cat=plugin.tx_ajaxselectlist_selectlist/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:ajaxselectlist/Resources/Private/Partials/
+        # cat=plugin.tx_ajaxselectlist_selectlist/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:ajaxselectlist/Resources/Private/Layouts/
+    }
 }

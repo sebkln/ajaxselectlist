@@ -6,6 +6,6 @@ plugin.tx_ajaxselectlist_selectlist {
 		layoutRootPaths.0 = {$plugin.tx_ajaxselectlist_selectlist.view.layoutRootPath}
 	}
 	persistence {
-		storagePid = {$plugin.tx_ajaxselectlist_selectlist.persistence.storagePid}
+		# storagePid =
 	}
 }
