@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-07-22T16:23:09Z" product-name="ajaxselectlist">
+		<header/>
+		<body>
+			<trans-unit id="tx_ajaxselectlist_domain_model_optionrecord">
+				<source>Option Record</source>
+			</trans-unit>
+			<trans-unit id="tx_ajaxselectlist_domain_model_optionrecord.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_ajaxselectlist_domain_model_optionrecord.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_ajaxselectlist_domain_model_optionrecord.text">
+				<source>Text</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
