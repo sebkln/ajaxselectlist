@@ -50,15 +50,15 @@ class OptionRecordController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
         $optionRecords = $this->optionRecordRepository->findAll();
         $this->view->assign('optionRecords', $optionRecords);
     }
-    
+
     /**
      * action ajaxCall
      *
+     * @param \Sebkln\Ajaxselectlist\Domain\Model\OptionRecord $optionRecord
      * @return void
      */
-    public function ajaxCallAction()
+    public function ajaxCallAction(\Sebkln\Ajaxselectlist\Domain\Model\OptionRecord $optionRecord)
     {
-        
+        $this->view->assign('optionRecord', $optionRecord);
     }
-
 }
