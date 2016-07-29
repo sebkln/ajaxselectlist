@@ -13,3 +13,23 @@ plugin.tx_ajaxselectlist_selectlist {
         typeNum = {$plugin.tx_ajaxselectlist_selectlist.settings.typeNum}
     }
 }
+
+
+
+
+// PAGE object for Ajax call:
+ajaxselectlist_page = PAGE
+ajaxselectlist_page {
+    typeNum = {$plugin.tx_ajaxselectlist_selectlist.settings.typeNum}
+
+    config {
+        disableAllHeaderCode = 1
+        additionalHeaders = Content-type:application/html
+        xhtml_cleaning = 0
+        debug = 0
+        no_cache = 1
+        admPanel = 0
+    }
+
+    10 < tt_content.list.20.ajaxselectlist_selectlist
+}
