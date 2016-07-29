@@ -1,11 +1,15 @@
-
 plugin.tx_ajaxselectlist_selectlist {
-	view {
-		templateRootPaths.0 = {$plugin.tx_ajaxselectlist_selectlist.view.templateRootPath}
-		partialRootPaths.0 = {$plugin.tx_ajaxselectlist_selectlist.view.partialRootPath}
-		layoutRootPaths.0 = {$plugin.tx_ajaxselectlist_selectlist.view.layoutRootPath}
-	}
-	persistence {
-		# storagePid =
-	}
+    view {
+        templateRootPaths.0 = {$plugin.tx_ajaxselectlist_selectlist.view.templateRootPath}
+        partialRootPaths.0 = {$plugin.tx_ajaxselectlist_selectlist.view.partialRootPath}
+        layoutRootPaths.0 = {$plugin.tx_ajaxselectlist_selectlist.view.layoutRootPath}
+    }
+
+    persistence {
+        # storagePid =
+    }
+
+    settings {
+        typeNum = {$plugin.tx_ajaxselectlist_selectlist.settings.typeNum}
+    }
 }
