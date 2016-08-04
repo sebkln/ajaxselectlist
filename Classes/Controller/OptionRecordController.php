@@ -49,7 +49,6 @@ class OptionRecordController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
     {
         $optionRecords = $this->optionRecordRepository->findAll();
         $this->view->assign('optionRecords', $optionRecords);
-        $this->view->assign("pageUid", $GLOBALS['TSFE']->id);
     }
 
     /**
