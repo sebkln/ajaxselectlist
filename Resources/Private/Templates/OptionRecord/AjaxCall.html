@@ -1,0 +1,15 @@
+<f:layout name="Default"/>
+
+<f:section name="main">
+    <h3>{optionRecord.title}</h3>
+    
+    <f:if condition="{optionRecord.image}">
+        <f:image src="{optionRecord.image.originalResource.uid}"
+                 treatIdAsReference="1"
+                 alt="{optionRecord.image.originalResource.altText}"
+                 title="{optionRecord.image.originalResource.title}"
+                 width="50"/>
+    </f:if>
+    
+    <f:format.html>{optionRecord.text}</f:format.html>
+</f:section>
