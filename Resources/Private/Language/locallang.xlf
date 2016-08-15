@@ -15,6 +15,9 @@
 			<trans-unit id="tx_ajaxselectlist_domain_model_optionrecord.text">
 				<source>Text</source>
 			</trans-unit>
+			<trans-unit id="tx_ajaxselectlist_domain_model_optionrecord.noEntriesFound">
+				<source>No entries for Ajax Select list found.</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
