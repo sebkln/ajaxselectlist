@@ -1,8 +1,19 @@
 plugin.tx_ajaxselectlist_selectlist {
     view {
-        templateRootPaths.0 = {$plugin.tx_ajaxselectlist_selectlist.view.templateRootPath}
-        partialRootPaths.0 = {$plugin.tx_ajaxselectlist_selectlist.view.partialRootPath}
-        layoutRootPaths.0 = {$plugin.tx_ajaxselectlist_selectlist.view.layoutRootPath}
+        templateRootPaths {
+            0 = EXT:ajaxselectlist/Resources/Private/Templates/
+            1 = {$plugin.tx_ajaxselectlist_selectlist.view.templateRootPath}
+        }
+
+        partialRootPaths {
+            0 = EXT:ajaxselectlist/Resources/Private/Partials/
+            1 = {$plugin.tx_ajaxselectlist_selectlist.view.partialRootPath}
+        }
+
+        layoutRootPaths {
+            0 = EXT:ajaxselectlist/Resources/Private/Layouts/
+            1 = {$plugin.tx_ajaxselectlist_selectlist.view.layoutRootPath}
+        }
     }
 
     persistence {
@@ -20,7 +31,7 @@ plugin.tx_ajaxselectlist_selectlist {
 // PAGE object for Ajax call:
 ajaxselectlist_page = PAGE
 ajaxselectlist_page {
-    typeNum = {$plugin.tx_ajaxselectlist_selectlist.settings.typeNum}
+    typeNum = 427590
 
     config {
         disableAllHeaderCode = 1
