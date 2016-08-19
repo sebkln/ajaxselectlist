@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Select list with Ajax call',
-	'description' => 'Provides a drop-down list which uses  Ajax to load records into the page.',
+	'description' => 'Provides a drop-down list which uses Ajax to load records into the page.',
 	'category' => 'plugin',
 	'author' => 'Sebastian Klein',
 	'author_email' => 'sebastian@sklein-medien.de',
