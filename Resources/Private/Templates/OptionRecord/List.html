@@ -40,14 +40,14 @@
 			var service = {
 				ajaxCall: function (data) {
 					$.ajax({
-						url: "index.php",
+						url: 'index.php',
 						cache: false,
 						data: data.serialize(),
 						success: function (result) {
 							resultContainer.html(result).fadeIn('fast');
 						},
 						error: function (jqXHR, textStatus, errorThrow) {
-							/* TODO: add error function */
+							resultContainer.html('Ajax request - ' + textStatus + ': ' + errorThrow).fadeIn('fast');
 						}
 					});
 				}
