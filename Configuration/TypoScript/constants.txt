@@ -1,15 +1,15 @@
 plugin.tx_ajaxselectlist_selectlist {
     view {
-        # cat=plugin.tx_ajaxselectlist_selectlist/file; type=string; label=Path to template root (FE)
-        templateRootPath = EXT:ajaxselectlist/Resources/Private/Templates/
-        # cat=plugin.tx_ajaxselectlist_selectlist/file; type=string; label=Path to template partials (FE)
-        partialRootPath = EXT:ajaxselectlist/Resources/Private/Partials/
-        # cat=plugin.tx_ajaxselectlist_selectlist/file; type=string; label=Path to template layouts (FE)
-        layoutRootPath = EXT:ajaxselectlist/Resources/Private/Layouts/
+        # cat=plugin.tx_ajaxselectlist_selectlist/file; type=string; label=Path to template root (FE): Specify a path to your custom templates. There is a fallback for any template that cannot be found in this path.
+        templateRootPath =
+        # cat=plugin.tx_ajaxselectlist_selectlist/file; type=string; label=Path to template partials (FE): Specify a path to your custom partials. There is a fallback for any partial that cannot be found in this path.
+        partialRootPath =
+        # cat=plugin.tx_ajaxselectlist_selectlist/file; type=string; label=Path to template layouts (FE): Specify a path to your custom layouts. There is a fallback for any layout that cannot be found in this path.
+        layoutRootPath =
     }
 
     settings {
-        # cat = plugin.tx_ajaxselectlist_selectlist//1; type=string; label=typeNum for AJAX call 
+        # cat = plugin.tx_ajaxselectlist_selectlist//1; type=int+; label=typeNum for AJAX call 
         typeNum = 427590 
     }
 }
