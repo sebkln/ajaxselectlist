@@ -23,9 +23,9 @@ This extension provides a drop-down list which uses Ajax to load records into th
 - multilanguage support
 - based on Extbase and Fluid
 - easy installation
-- fully functional, basic Fluid templates, **but:**
+- fully functional, but basic Fluid templates without further styling, **because:**
 - **the templates are meant for customization! Simply adapt them to your specific design and needs.**
-- depends on jQuery (you're free to change the Ajax request to vanilla JavaScript, though)
+- depends on jQuery (the Ajax request could be rewritten to vanilla JavaScript, though)
 
 .. _screenshots:
 

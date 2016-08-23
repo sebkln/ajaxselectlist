@@ -66,7 +66,7 @@ If you're working on a multilanguage page, you can start translating your record
 
 .. Important ::
 
-   In order to translate records, you have to activate the checkbox *Localization view* in the *Web>List* view. It is also important that there is a *Alternative Page Language* set on the page or folder that contains the . If you're not allowed to create  Alternative Page Languages, contact an administrator and request assistance.
+   In order to translate records, you have to activate the checkbox *Localization view* in the *Web>List* view. It is also important that there is an *Alternative Page Language* set on the page/folder that contains the records and/or plugin. If you're not allowed to create  Alternative Page Languages, contact an administrator and request assistance.
 
 If the above conditions are met, your TYPO3 backend shows flag buttons next to your records. Click on any of them to translate the record to the chosen language.
 
