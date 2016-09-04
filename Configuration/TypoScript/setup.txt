@@ -17,7 +17,8 @@ plugin.tx_ajaxselectlist {
     }
 
     persistence {
-        # storagePid =
+        storagePid =
+        recursive =
     }
 
     settings {
