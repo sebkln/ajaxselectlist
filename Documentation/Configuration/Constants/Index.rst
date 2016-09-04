@@ -11,18 +11,20 @@
 TypoScript Constants Reference
 ==============================
 
-:typoscript:`plugin.tx_ajaxselectlist_selectlist`
+:typoscript:`plugin.tx_ajaxselectlist`
 
 .. container:: ts-properties
 
-	=========================== ========================================= ===============================================
+	=========================== ========================================= ========
 	Property                    Data type                                 Default
-	=========================== ========================================= ===============================================
-	view.templateRootPath_      :ref:`t3tsref:data-type-path`             EXT:ajaxselectlist/Resources/Private/Templates/
-	view.partialRootPath_       :ref:`t3tsref:data-type-path`             EXT:ajaxselectlist/Resources/Private/Partials/
-	view.layoutRootPath_        :ref:`t3tsref:data-type-path`             EXT:ajaxselectlist/Resources/Private/Layouts/
+	=========================== ========================================= ========
+	view.templateRootPath_      :ref:`t3tsref:data-type-path`             *empty*
+	view.partialRootPath_       :ref:`t3tsref:data-type-path`             *empty*
+	view.layoutRootPath_        :ref:`t3tsref:data-type-path`             *empty*
+	persistence.storagePid_     :ref:`t3tsref:data-type-page-id`          *empty*
+	persistence.recursive_      :ref:`t3tsref:data-type-positive-integer` *empty*
 	settings.typeNum_           :ref:`t3tsref:data-type-positive-integer` 427590
-	=========================== ========================================= ===============================================
+	=========================== ========================================= ========
 
 Property details
 ^^^^^^^^^^^^^^^^
@@ -40,7 +42,7 @@ view.templateRootPath
    Description
          Path to the templates for this extension. See :ref:`Changing Templates <configuration-templates>` how to use this.
    Default
-         :typoscript:`EXT:ajaxselectlist/Resources/Private/Templates/`
+         *empty*
 
 .. _partialRootPath:
 
@@ -57,7 +59,7 @@ view.partialRootPath
 
          .. note:: By default no partials are used by this extension. You're free to add some.
    Default
-         :typoscript:`EXT:ajaxselectlist/Resources/Private/Partials/`
+         *empty*
 
 .. _layoutRootPath:
 
@@ -72,9 +74,41 @@ view.layoutRootPath
    Description
          Path to the layout for this extension. See :ref:`Changing Templates <configuration-templates>` how to use this.
    Default
-         :typoscript:`EXT:ajaxselectlist/Resources/Private/Templates/`
+         *empty*
 
 .. _settings.typeNum:
+
+.. _tsstoragePid:
+
+persistence.storagePid
+""""""""""""""""""""""
+.. container:: table-row
+
+   Property
+         persistence.storagePid
+   Data type
+         page_id
+   Description
+         Comma-separated list of pages (UIDs) which contain records for this extension.
+   Default
+         *empty*
+
+.. _tsrecursive:
+
+persistence.recursive
+"""""""""""""""""""""
+.. container:: table-row
+
+   Property
+         persistence.recursive
+   Data type
+         positive integer
+   Description
+        The **number of subpage levels** which are searched for records. Starting point are the page(s) that were set with :typoscript:`storagePid` or in the plugin form field *Record Storage Page*.
+
+        ``0`` or empty = disable recursive mode
+   Default
+         *empty*
 
 settings.typeNum
 """"""""""""""""

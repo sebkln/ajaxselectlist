@@ -11,22 +11,23 @@
 TypoScript Setup Reference
 ==========================
 
-:typoscript:`plugin.tx_ajaxselectlist_selectlist`
+:typoscript:`plugin.tx_ajaxselectlist`
 
 Properties
 ^^^^^^^^^^
 
 .. container:: ts-properties
 
-	=========================== ================================================= =======================================================
+	=========================== ================================================= =============================================================
 	Property                    Data type                                         Default
-	=========================== ================================================= =======================================================
+	=========================== ================================================= =============================================================
 	view.templateRootPaths_     array of file paths with :ref:`stdWrap <stdwrap>` *array with fallback path and constant value*
 	view.partialRootPaths_      array of file paths with :ref:`stdWrap <stdwrap>` *array with fallback path and constant value*
 	view.layoutRootPaths_       array of file paths with :ref:`stdWrap <stdwrap>` *array with fallback path and constant value*
-	persistence.storagePid_     :ref:`t3tsref:data-type-page-id`                  *not set*
-	settings.typeNum_           :ref:`t3tsref:data-type-positive-integer`                      :typoscript:`{$plugin.tx_ajaxselectlist_selectlist.settings.typeNum}`
-	=========================== ================================================= =======================================================
+	persistence.storagePid_     :ref:`t3tsref:data-type-page-id`                  :typoscript:`{$plugin.tx_ajaxselectlist.settings.storagePid}`
+	persistence.recursive_      :ref:`t3tsref:data-type-positive-integer`         :typoscript:`{$plugin.tx_ajaxselectlist.settings.recursive}`
+	settings.typeNum_           :ref:`t3tsref:data-type-positive-integer`         :typoscript:`{$plugin.tx_ajaxselectlist.settings.typeNum}`
+	=========================== ================================================= =============================================================
 
 Property details
 ^^^^^^^^^^^^^^^^
@@ -48,7 +49,7 @@ view.templateRootPaths
 
               view.templateRootPaths {
                  0 = EXT:ajaxselectlist/Resources/Private/Templates/
-                 1 = {$plugin.tx_ajaxselectlist_selectlist.view.templateRootPath}
+                 1 = {$plugin.tx_ajaxselectlist.view.templateRootPath}
               }
 
 .. _partialRootPaths:
@@ -70,7 +71,7 @@ view.partialRootPaths
 
               view.partialRootPaths {
                  0 = EXT:ajaxselectlist/Resources/Private/Partials/
-                 1 = {$plugin.tx_ajaxselectlist_selectlist.view.partialRootPath}
+                 1 = {$plugin.tx_ajaxselectlist.view.partialRootPath}
               }
 
 .. _layoutRootPaths:
@@ -90,7 +91,7 @@ view.layoutRootPaths
 
               view.layoutRootPaths {
                  0 = EXT:ajaxselectlist/Resources/Private/Layouts/
-                 1 = {$plugin.tx_ajaxselectlist_selectlist.view.layoutRootPath}
+                 1 = {$plugin.tx_ajaxselectlist.view.layoutRootPath}
               }
 
 .. _tsstoragePid:
@@ -105,18 +106,25 @@ persistence.storagePid
          page_id
    Description
          Comma-separated list of pages (UIDs) which contain records for this extension.
-
-         .. warning::
-
-            If set, this overwrites all directories you set in the Plugin's backend form!
    Default
-         *not set*
+         :typoscript:`{$plugin.tx_ajaxselectlist.view.storagePid}`
 
-.. only:: html
+.. _tsrecursive:
 
-	.. contents::
-		:local:
-		:depth: 1
+persistence.recursive
+"""""""""""""""""""""
+.. container:: table-row
+
+   Property
+         persistence.recursive
+   Data type
+         positive integer
+   Description
+         The **number of subpage levels** which are searched for records. Starting point are the page(s) that were set with :typoscript:`storagePid` or in the plugin form field *Record Storage Page*.
+
+         ``0`` or empty = disable recursive mode
+   Default
+         :typoscript:`{$plugin.tx_ajaxselectlist.view.recursive}`
 
 .. _tstypeNum:
 
@@ -135,7 +143,7 @@ settings.typeNum
 
            Currently this setting is only used in the Fluid ``f:form`` Viewhelper. If you have to change it, you'll have to set the new typeNum in the ``PAGE`` object separately. This may be fixed in future versions.
    Default
-         :typoscript:`{$plugin.tx_ajaxselectlist_selectlist.settings.typeNum}`
+         :typoscript:`{$plugin.tx_ajaxselectlist.settings.typeNum}`
 
 
 PAGE object

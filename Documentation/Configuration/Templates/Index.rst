@@ -31,7 +31,7 @@ Change the templates using TypoScript Constants
 
 .. code-block:: typoscript
 
-	plugin.tx_ajaxselectlist_selectlist {
+	plugin.tx_ajaxselectlist {
 	    view {
 	        templateRootPath =
 	        partialRootPath =
@@ -45,21 +45,21 @@ Change the templates using TypoScript Setup
 
 .. code-block:: typoscript
 
-	plugin.tx_ajaxselectlist_selectlist {
+	plugin.tx_ajaxselectlist {
 	    view {
 	        templateRootPaths {
 	            0 = EXT:ajaxselectlist/Resources/Private/Templates/
-	            1 = {$plugin.tx_ajaxselectlist_selectlist.view.templateRootPath}
+	            1 = {$plugin.tx_ajaxselectlist.view.templateRootPath}
 	        }
 
 	        partialRootPaths {
 	            0 = EXT:ajaxselectlist/Resources/Private/Partials/
-	            1 = {$plugin.tx_ajaxselectlist_selectlist.view.partialRootPath}
+	            1 = {$plugin.tx_ajaxselectlist.view.partialRootPath}
 	        }
 
 	        layoutRootPaths {
 	            0 = EXT:ajaxselectlist/Resources/Private/Layouts/
-	            1 = {$plugin.tx_ajaxselectlist_selectlist.view.layoutRootPath}
+	            1 = {$plugin.tx_ajaxselectlist.view.layoutRootPath}
 	        }
 	    }
 	}
@@ -73,11 +73,11 @@ Example
 
 .. code-block:: typoscript
 
-	plugin.tx_ajaxselectlist_selectlist {
+	plugin.tx_ajaxselectlist {
 	    view {
 	        templateRootPaths {
 	            0 = EXT:ajaxselectlist/Resources/Private/Templates/
-	            1 = {$plugin.tx_ajaxselectlist_selectlist.view.templateRootPath}
+	            1 = {$plugin.tx_ajaxselectlist.view.templateRootPath}
 	            2 = EXT:my_custom_templates/Resources/Private/Templates/ajaxselectlist/
 	        }
 	    }
@@ -85,7 +85,7 @@ Example
 
 	// different template for a single page:
 	[globalVar = TSFE:id=17]
-	plugin.tx_ajaxselectlist_selectlist {
+	plugin.tx_ajaxselectlist {
 	    view {
 	        templateRootPaths {
 	            3 = EXT:my_custom_templates/Resources/Private/Templates/ajaxselectlist_alternative/
@@ -98,5 +98,5 @@ Example
 
    Please remember to use the subfolder **OptionRecord** (named after the Object Model) for your templates!
 
-   For example, if you use :typoscript:`plugin.tx_ajaxselectlist_selectlist.view.templateRootPath = fileadmin/Templates/selectlist/`, the *List.html* and *AjaxCall.html* must be inside ``fileadmin/Templates/selectlist/OptionRecord/``.
+   For example, if you use :typoscript:`plugin.tx_ajaxselectlist.view.templateRootPath = fileadmin/Templates/selectlist/`, the *List.html* and *AjaxCall.html* must be inside ``fileadmin/Templates/selectlist/OptionRecord/``.
 
