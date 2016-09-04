@@ -1,4 +1,4 @@
-plugin.tx_ajaxselectlist_selectlist {
+plugin.tx_ajaxselectlist {
     view {
         templateRootPaths {
             0 = EXT:ajaxselectlist/Resources/Private/Templates/
