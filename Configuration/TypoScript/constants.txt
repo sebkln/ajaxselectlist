@@ -8,6 +8,13 @@ plugin.tx_ajaxselectlist {
         layoutRootPath =
     }
 
+    persistence {
+        # cat=plugin.tx_ajaxselectlist//1; type=string; label=Storage folder(s): Comma-separated list of pages (UIDs) which contain records for this extension.
+        storagePid =
+        # cat=plugin.tx_ajaxselectlist//2; type=int+; label=Recursive mode: The number of subpage levels which are searched for records. Starting point are the page(s) that were set with storagePid or in the plugin form field Record Storage Page.
+        recursive =
+    }
+
     settings {
         # cat = plugin.tx_ajaxselectlist//3; type=int+; label=typeNum for AJAX call 
         typeNum = 427590 

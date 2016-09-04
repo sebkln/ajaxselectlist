@@ -17,8 +17,8 @@ plugin.tx_ajaxselectlist {
     }
 
     persistence {
-        storagePid =
-        recursive =
+        storagePid = {$plugin.tx_ajaxselectlist.persistence.storagePid}
+        recursive = {$plugin.tx_ajaxselectlist.persistence.recursive}
     }
 
     settings {
