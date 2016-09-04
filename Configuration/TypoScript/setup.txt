@@ -22,7 +22,7 @@ plugin.tx_ajaxselectlist {
     }
 
     settings {
-        typeNum = {$plugin.tx_ajaxselectlist_selectlist.settings.typeNum}
+        typeNum = {$plugin.tx_ajaxselectlist.settings.typeNum}
     }
 }
 
