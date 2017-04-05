@@ -24,6 +24,10 @@ plugin.tx_ajaxselectlist {
     settings {
         typeNum = {$plugin.tx_ajaxselectlist.settings.typeNum}
     }
+
+    features {
+        requireCHashArgumentForActionArguments = 0
+    }
 }
 
 
