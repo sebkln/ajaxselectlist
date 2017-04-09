@@ -40,9 +40,10 @@ class OptionRecord extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $title = '';
     
     /**
-     * image
+     * FAL media items. The old name is kept for backward compatibility reasons.
      *
-     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
+     * @lazy
      */
     protected $image = null;
     
@@ -52,6 +53,24 @@ class OptionRecord extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var string
      */
     protected $text = '';
+
+    /**
+     * OptionRecord constructor
+     */
+    public function __construct()
+    {
+        $this->initStorageObjects();
+    }
+
+    /**
+     * Initializes all ObjectStorage properties
+     *
+     * @return void
+     */
+    protected function initStorageObjects()
+    {
+        $this->image = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+    }
     
     /**
      * Returns the title
@@ -75,9 +94,9 @@ class OptionRecord extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
     
     /**
-     * Returns the image
+     * Returns the images
      *
-     * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
      */
     public function getImage()
     {
@@ -85,16 +104,16 @@ class OptionRecord extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
     
     /**
-     * Sets the image
+     * Sets the images
      *
-     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $image
      * @return void
      */
-    public function setImage(\TYPO3\CMS\Extbase\Domain\Model\FileReference $image)
+    public function setImage($image)
     {
         $this->image = $image;
     }
-    
+
     /**
      * Returns the text
      *

@@ -1,0 +1,99 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:comment>
+    Why yes, this is mostly borrowed from fluid_styled_content (TYPO3 CMS 7.6),
+    Partial MediaGallery.html to be precise.
+    No need to reinvent the wheel here.
+    
+    Explanation:
+    - As you can now use more than one media asset, you'll have to use f:for to get all related files.
+    - If a description is set for a media file, a HTML5 figure tag is used, otherwise a div class.
+    - With f:switch we compare the respective file type: an image, audio or video.
+      Depending on that, one of the sections further below is rendered.
+    
+    Debugging:
+    Find all the data you need in these arrays.
+    <f:debug title="Media FAL object">{falmedia}</f:debug>
+    <f:debug title="originalResource">{falmedia.originalResource}</f:debug>
+    <f:debug title="Properties">{falmedia.originalResource.properties}</f:debug>
+    <f:debug title="TypoScript settings">{settings}</f:debug>
+</f:comment>
+
+<f:for each="{optionRecord.image}" as="falmedia">
+    <f:if condition="{falmedia.originalResource.description}">
+        <f:then>
+            <figure>
+        </f:then>
+        <f:else>
+            <div class="media">
+        </f:else>
+    </f:if>
+    
+    <f:switch expression="{falmedia.originalResource.type}">
+        <f:case value="3">
+            <f:render section="audioType" arguments="{_all}"/>
+        </f:case>
+        <f:case value="4">
+            <f:render section="videoType" arguments="{_all}"/>
+        </f:case>
+        <f:case default="TRUE">
+            <f:render section="imageType" arguments="{_all}"/>
+        </f:case>
+    </f:switch>
+    
+    <f:if condition="{falmedia.originalResource.description}">
+        <f:then>
+            <figcaption>
+                {falmedia.originalResource.description}
+            </figcaption>
+            </figure>
+        </f:then>
+        <f:else>
+            </div>
+        </f:else>
+    </f:if>
+</f:for>
+
+<f:section name="imageType">
+    <f:if condition="{falmedia.originalResource.properties.link}">
+        <f:then>
+            <f:link.typolink parameter="{falmedia.originalResource.properties.link}">
+                <f:image src="{falmedia.originalResource.uid}"
+                         treatIdAsReference="1"
+                         alt="{falmedia.originalResource.altText}"
+                         title="{falmedia.originalResource.title}"
+                         maxHeight="{settings.media.image.maxHeight}"
+                         maxWidth="{settings.media.image.maxWidth}"/>
+            </f:link.typolink>
+        </f:then>
+        <f:else>
+            <f:image src="{falmedia.originalResource.uid}"
+                     treatIdAsReference="1"
+                     alt="{falmedia.originalResource.altText}"
+                     title="{falmedia.originalResource.title}"
+                     maxHeight="{settings.media.image.maxHeight}"
+                     maxWidth="{settings.media.image.maxWidth}"/>
+        </f:else>
+    </f:if>
+</f:section>
+
+<f:section name="audioType">
+    <f:render section="media" arguments="{_all}"/>
+</f:section>
+
+<f:section name="videoType">
+    <f:render section="media" arguments="{_all}"/>
+</f:section>
+
+<f:section name="media">
+    <f:debug title="Media FAL object">{falmedia}</f:debug>
+    <f:media
+            file="{falmedia}"
+            width="{falmedia.originalResource.properties.width}"
+            height="{falmedia.originalResource.properties.height}"
+            alt="{falmedia.originalResource.properties.alternative}"
+            title="{falmedia.originalResource.properties.title}"
+    />
+</f:section>
+
+</html>

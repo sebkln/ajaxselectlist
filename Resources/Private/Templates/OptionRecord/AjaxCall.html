@@ -1,15 +1,18 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
 <f:layout name="Default"/>
 
 <f:section name="main">
     <h3>{optionRecord.title}</h3>
     
-    <f:if condition="{optionRecord.image}">
-        <f:image src="{optionRecord.image.originalResource.uid}"
-                 treatIdAsReference="1"
-                 alt="{optionRecord.image.originalResource.altText}"
-                 title="{optionRecord.image.originalResource.title}"
-                 width="50"/>
-    </f:if>
+    <div class="optionMedia">
+        <f:if condition="{optionRecord.image}">
+            <f:render partial="Media" arguments="{_all}"/>
+        </f:if>
+    </div>
     
-    <f:format.html>{optionRecord.text}</f:format.html>
+    <div class="optionText">
+        <f:format.html>{optionRecord.text}</f:format.html>
+    </div>
 </f:section>
+</html>

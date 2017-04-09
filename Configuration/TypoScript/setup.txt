@@ -23,6 +23,13 @@ plugin.tx_ajaxselectlist {
 
     settings {
         typeNum = {$plugin.tx_ajaxselectlist.settings.typeNum}
+
+        media {
+            image {
+                maxWidth = {$styles.content.textmedia.maxW}
+                maxHeight =
+            }
+        }
     }
 
     features {

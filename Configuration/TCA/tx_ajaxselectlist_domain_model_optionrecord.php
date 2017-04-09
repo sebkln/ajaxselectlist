@@ -28,7 +28,9 @@ return [
         '0' => [
             'showitem' => '
                 --div--;LLL:EXT:lang/locallang_core.xlf:labels.generalTab,
-                    title,image,text,
+                    title,text,
+                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media,
+                    image,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.language,
                     --palette--;;language,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.access,
@@ -141,12 +143,12 @@ return [
         ],
         'image' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:lang/locallang_tca.xlf:sys_file.type.image',
+            'label' => 'LLL:EXT:fluid_styled_content/Resources/Private/Language/Database.xlf:tt_content.asset_references',
             'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
                 'image',
                 [
                     'appearance' => [
-                        'createNewRelationLinkTitle' => 'LLL:EXT:cms/locallang_ttc.xlf:images.addFileReference'
+                        'createNewRelationLinkTitle' => 'LLL:EXT:fluid_styled_content/Resources/Private/Language/Database.xlf:tt_content.asset_references.addFileReference'
                     ],
                     'foreign_types' => [
                         '0' => [
@@ -166,12 +168,12 @@ return [
                         ],
                         \TYPO3\CMS\Core\Resource\File::FILETYPE_AUDIO => [
                             'showitem' => '
-                            --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                            --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.audioOverlayPalette;audioOverlayPalette,
                             --palette--;;filePalette'
                         ],
                         \TYPO3\CMS\Core\Resource\File::FILETYPE_VIDEO => [
                             'showitem' => '
-                            --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                            --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.videoOverlayPalette;videoOverlayPalette,
                             --palette--;;filePalette'
                         ],
                         \TYPO3\CMS\Core\Resource\File::FILETYPE_APPLICATION => [
@@ -180,9 +182,8 @@ return [
                             --palette--;;filePalette'
                         ]
                     ],
-                    'maxitems' => 1
                 ],
-                $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
+                $GLOBALS['TYPO3_CONF_VARS']['SYS']['mediafile_ext']
             ),
         ],
         'text' => [
