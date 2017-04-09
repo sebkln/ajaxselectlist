@@ -52,7 +52,7 @@ return [
     'columns' => [
         'sys_language_uid' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.language',
+            'label' => $GLOBALS['TCA']['tt_content']['columns']['sys_language_uid']['label'],
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
@@ -111,7 +111,7 @@ return [
         'starttime' => [
             'exclude' => 1,
             'l10n_mode' => 'mergeIfNotBlank',
-            'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:starttime_formlabel',
+            'label' => $GLOBALS['TCA']['tt_content']['columns']['starttime']['label'],
             'config' => [
                 'type' => 'input',
                 'size' => 16,
@@ -123,7 +123,7 @@ return [
         'endtime' => [
             'exclude' => 1,
             'l10n_mode' => 'mergeIfNotBlank',
-            'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:endtime_formlabel',
+            'label' => $GLOBALS['TCA']['tt_content']['columns']['enddtime']['label'],
             'config' => [
                 'type' => 'input',
                 'size' => 16,
@@ -134,7 +134,7 @@ return [
         ],
         'title' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.title',
+            'label' => $GLOBALS['TCA']['sys_category']['columns']['title']['label'],
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -188,7 +188,7 @@ return [
         ],
         'text' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext.ALT.textbox_formlabel',
+            'label' => $GLOBALS['TCA']['tt_content']['columns']['bodytext']['label'],
             'config' => [
                 'type' => 'text',
                 'cols' => '48',
@@ -198,6 +198,5 @@ return [
             ],
             'defaultExtras' => 'richtext:rte_transform[mode=ts_css]',
         ],
-
     ],
 ];
