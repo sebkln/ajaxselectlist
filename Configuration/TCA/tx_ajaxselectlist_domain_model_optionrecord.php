@@ -110,27 +110,17 @@ return [
         ],
         'starttime' => [
             'exclude' => 1,
-            'l10n_mode' => 'mergeIfNotBlank',
             'label' => $GLOBALS['TCA']['tt_content']['columns']['starttime']['label'],
-            'config' => [
-                'type' => 'input',
-                'size' => 16,
-                'max' => 20,
-                'eval' => 'datetime',
-                'default' => 0,
-            ]
+            'config' => $GLOBALS['TCA']['tt_content']['columns']['starttime']['config'],
+            'l10n_mode' => 'exclude',
+            'l10n_display' => 'defaultAsReadonly'
         ],
         'endtime' => [
             'exclude' => 1,
-            'l10n_mode' => 'mergeIfNotBlank',
             'label' => $GLOBALS['TCA']['tt_content']['columns']['enddtime']['label'],
-            'config' => [
-                'type' => 'input',
-                'size' => 16,
-                'max' => 20,
-                'eval' => 'datetime',
-                'default' => 0,
-            ]
+            'config' => $GLOBALS['TCA']['tt_content']['columns']['endtime']['config'],
+            'l10n_mode' => 'exclude',
+            'l10n_display' => 'defaultAsReadonly'
         ],
         'title' => [
             'exclude' => 1,
