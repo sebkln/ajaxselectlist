@@ -1,12 +1,12 @@
 <?php
 if (!defined('TYPO3_MODE')) {
-	die('Access denied.');
+    die('Access denied.');
 }
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-	'Sebkln.' . $_EXTKEY,
-	'Selectlist',
-	'Ajax select list'
+    'Sebkln.' . $_EXTKEY,
+    'Selectlist',
+    'Ajax select list'
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Select list with Ajax call');
