@@ -67,12 +67,29 @@
             </f:link.typolink>
         </f:then>
         <f:else>
-            <f:image src="{falmedia.originalResource.uid}"
-                     treatIdAsReference="1"
-                     alt="{falmedia.originalResource.altText}"
-                     title="{falmedia.originalResource.title}"
-                     maxHeight="{settings.media.image.maxHeight}"
-                     maxWidth="{settings.media.image.maxWidth}"/>
+            <f:if condition="{optionRecord.imageZoom}">
+                <f:then>
+                    <a href="{f:uri.image(src:falmedia.originalResource.uid, treatIdAsReference:'1', width:'{settings.media.image.lightbox.width}', height:'{settings.media.image.lightbox.height}')}"
+                       title="{falmedia.originalResource.title}"
+                       class="{settings.media.image.lightbox.class}"
+                       rel="{settings.media.image.lightbox.rel}">
+                            <f:image src="{falmedia.originalResource.uid}"
+                                     treatIdAsReference="1"
+                                     alt="{falmedia.originalResource.altText}"
+                                     title="{falmedia.originalResource.title}"
+                                     maxHeight="{settings.media.image.maxHeight}"
+                                     maxWidth="{settings.media.image.maxWidth}"/>
+                    </a>
+                </f:then>
+                <f:else>
+                    <f:image src="{falmedia.originalResource.uid}"
+                             treatIdAsReference="1"
+                             alt="{falmedia.originalResource.altText}"
+                             title="{falmedia.originalResource.title}"
+                             maxHeight="{settings.media.image.maxHeight}"
+                             maxWidth="{settings.media.image.maxWidth}"/>
+                </f:else>
+            </f:if>
         </f:else>
     </f:if>
 </f:section>

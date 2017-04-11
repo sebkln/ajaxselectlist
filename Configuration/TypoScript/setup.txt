@@ -28,6 +28,14 @@ plugin.tx_ajaxselectlist {
             image {
                 maxWidth = {$styles.content.textmedia.maxW}
                 maxHeight =
+
+                # Get lightbox settings from fluid_styled_content:
+                lightbox {
+                    class = {$styles.content.textmedia.linkWrap.lightboxCssClass}
+                    rel = {$styles.content.textmedia.linkWrap.lightboxRelAttribute}
+                    width = {$styles.content.textmedia.linkWrap.width}
+                    height = {$styles.content.textmedia.linkWrap.height}
+                }
             }
         }
     }

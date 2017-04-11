@@ -55,6 +55,13 @@ class OptionRecord extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $text = '';
 
     /**
+     * imageZoom
+     *
+     * @var bool
+     */
+    public $imageZoom;
+
+    /**
      * OptionRecord constructor
      */
     public function __construct()
@@ -135,4 +142,24 @@ class OptionRecord extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         $this->text = $text;
     }
 
+    /**
+     * Returns the imageZoom
+     *
+     * @return boolean $imageZoom
+     */
+    public function getImageZoom()
+    {
+        return $this->imageZoom;
+    }
+
+    /**
+     * Sets the imageZoom
+     *
+     * @param boolean $imageZoom
+     * @return void
+     */
+    public function setImageZoom($imageZoom)
+    {
+        $this->imageZoom = $imageZoom;
+    }
 }

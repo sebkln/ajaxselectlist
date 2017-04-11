@@ -9,6 +9,7 @@ CREATE TABLE tx_ajaxselectlist_domain_model_optionrecord (
 	title varchar(255) DEFAULT '' NOT NULL,
 	image int(11) unsigned NOT NULL default '0',
 	text text NOT NULL,
+	image_zoom tinyint(3) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,

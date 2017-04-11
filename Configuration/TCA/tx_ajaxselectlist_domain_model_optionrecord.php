@@ -22,7 +22,7 @@ return [
         'iconfile' => 'EXT:ajaxselectlist/Resources/Public/Icons/tx_ajaxselectlist_domain_model_optionrecord.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, image, text',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, image, text, image_zoom',
     ],
     'types' => [
         '0' => [
@@ -31,6 +31,7 @@ return [
                     title,text,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media,
                     image,
+                    --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.imagelinks;imagelinks,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.language,
                     --palette--;;language,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.access,
@@ -48,6 +49,7 @@ return [
         'visibility' => ['showitem' => 'hidden'],
         'timeRestriction' => ['showitem' => 'starttime, endtime'],
         'language' => ['showitem' => 'sys_language_uid, l10n_parent'],
+        'imagelinks' => ['showitem' => 'image_zoom;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:image_zoom_formlabel',],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -176,6 +178,7 @@ return [
                 $GLOBALS['TYPO3_CONF_VARS']['SYS']['mediafile_ext']
             ),
         ],
+        'image_zoom' => $GLOBALS['TCA']['tt_content']['columns']['image_zoom'],
         'text' => [
             'exclude' => 1,
             'label' => $GLOBALS['TCA']['tt_content']['columns']['bodytext']['label'],
