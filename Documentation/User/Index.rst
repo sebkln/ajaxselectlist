@@ -29,11 +29,17 @@ Please remember: records for this extension are editable only in the *Web>List* 
 
    Add a new option record
 
-.. figure:: ../Images/UserManual/OptionRecordForm.png
+.. figure:: ../Images/UserManual/OptionRecordFormGeneral.png
    :width: 800px
-   :alt: Backend form for the records
+   :alt: Backend form for the records, General tab
 
-   Backend form for the records
+   Backend form for the records. General tab with Title field and Rich Text Editor.
+
+.. figure:: ../Images/UserManual/OptionRecordFormMedia.png
+   :width: 800px
+   :alt: Backend form for the records, Media tab
+
+   Backend form for the records. Media tab with related media file and the button for cropping the image.
 
 2. Insert the plugin on a page
 ------------------------------
