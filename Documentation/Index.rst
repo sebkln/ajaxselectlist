@@ -38,8 +38,7 @@ Select list with Ajax call
 		sebastian@sklein-medien.de
 
 	:License:
-		This document is published under the Open Content License
-		available from http://www.opencontent.org/opl.shtml
+		Open Publication License available from `www.opencontent.org/openpub/ <http://www.opencontent.org/openpub/>`_
 
 	:Rendered:
 		|today|
