@@ -17,5 +17,8 @@ Links
 :Git Repository:
 	https://github.com/sebkln/ajaxselectlist
 
+:Packagist:
+	https://packagist.org/packages/sebkln/ajaxselectlist
+
 :Contact:
 	sebastian@sklein-medien.de
