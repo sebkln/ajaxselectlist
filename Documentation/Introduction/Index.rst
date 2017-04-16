@@ -20,6 +20,8 @@ What does it do?
 This extension provides a drop-down list which uses Ajax to load records into the page without reloading the website.
 
 - potential uses: for instance listing of **employees** or **branch stores**
+- use title, richtext and multimedia assets (images, videos, ...)
+- support of both RTE extensions (rtehtmlarea and rte_ckeditor)
 - multilanguage support
 - based on Extbase and Fluid
 - easy installation
