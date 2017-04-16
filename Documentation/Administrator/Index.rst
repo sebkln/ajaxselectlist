@@ -47,3 +47,15 @@ Configuration
 After completing the above steps, the plugin and records can be created. The plugin will already load your records in the frontend.
 
 However, you'll want to modify the Fluid templates to fit your design and needs. The :ref:`configuration` covers TypoScript settings and :ref:`configuration-templates`.
+
+.. _admin-subpages:
+
+Subpages
+--------
+
+.. toctree::
+	:maxdepth: 5
+	:titlesonly:
+
+	Upgrade/Index
+	Lightbox/Index
