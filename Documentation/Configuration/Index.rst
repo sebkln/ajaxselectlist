@@ -15,6 +15,6 @@ Configuration Reference
 	:maxdepth: 5
 	:titlesonly:
 
-    	Constants/Index
-       	Setup/Index
-       	Templates/Index
+	Constants/Index
+	Setup/Index
+	Templates/Index
