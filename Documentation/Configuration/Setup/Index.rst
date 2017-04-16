@@ -18,16 +18,19 @@ Properties
 
 .. container:: ts-properties
 
-	=========================== ================================================= =============================================================
-	Property                    Data type                                         Default
-	=========================== ================================================= =============================================================
-	view.templateRootPaths_     array of file paths with :ref:`stdWrap <stdwrap>` *array with fallback path and constant value*
-	view.partialRootPaths_      array of file paths with :ref:`stdWrap <stdwrap>` *array with fallback path and constant value*
-	view.layoutRootPaths_       array of file paths with :ref:`stdWrap <stdwrap>` *array with fallback path and constant value*
-	persistence.storagePid_     :ref:`t3tsref:data-type-page-id`                  :typoscript:`{$plugin.tx_ajaxselectlist.settings.storagePid}`
-	persistence.recursive_      :ref:`t3tsref:data-type-positive-integer`         :typoscript:`{$plugin.tx_ajaxselectlist.settings.recursive}`
-	settings.typeNum_           :ref:`t3tsref:data-type-positive-integer`         :typoscript:`{$plugin.tx_ajaxselectlist.settings.typeNum}`
-	=========================== ================================================= =============================================================
+	================================ ================================================= =============================================================
+	Property                         Data type                                         Default
+	================================ ================================================= =============================================================
+	view.templateRootPaths_          array of file paths with :ref:`stdWrap <stdwrap>` *array with fallback path and constant value*
+	view.partialRootPaths_           array of file paths with :ref:`stdWrap <stdwrap>` *array with fallback path and constant value*
+	view.layoutRootPaths_            array of file paths with :ref:`stdWrap <stdwrap>` *array with fallback path and constant value*
+	persistence.storagePid_          :ref:`t3tsref:data-type-page-id`                  :typoscript:`{$plugin.tx_ajaxselectlist.settings.storagePid}`
+	persistence.recursive_           :ref:`t3tsref:data-type-positive-integer`         :typoscript:`{$plugin.tx_ajaxselectlist.settings.recursive}`
+	settings.typeNum_                :ref:`t3tsref:data-type-positive-integer`         :typoscript:`{$plugin.tx_ajaxselectlist.settings.typeNum}`
+	settings.media.image.maxWidth_   pixels                                            :typoscript:`{$styles.content.textmedia.maxW}`
+	settings.media.image.maxHeight_  pixels                                            *empty*
+	settings.media.image.lightbox_   array of TypoScript properties                    *multiple Typoscript Constants from fluid_styled_content*
+	================================ ================================================= =============================================================
 
 Property details
 ^^^^^^^^^^^^^^^^
@@ -144,6 +147,67 @@ settings.typeNum
            Currently this setting is only used in the Fluid ``f:form`` Viewhelper. If you have to change it, you'll have to set the new typeNum in the ``PAGE`` object separately. This may be fixed in future versions.
    Default
          :typoscript:`{$plugin.tx_ajaxselectlist.settings.typeNum}`
+
+
+.. _tsmaxWidth:
+
+settings.media.image.maxWidth
+"""""""""""""""""""""""""""""
+.. container:: table-row
+
+   Property
+         settings.media.image.maxWidth
+   Data type
+         pixels
+   Description
+         Sets the maximum width of images. By default it uses the :typoscript:`maxW` value of *fluid_styled_content*. Can of course be set to the *css_styled_content* equivalent.
+   Default
+         :typoscript:`{$styles.content.textmedia.maxW}`
+
+
+.. _tsmaxHeight:
+
+settings.media.image.maxHeight
+""""""""""""""""""""""""""""""
+.. container:: table-row
+
+   Property
+         settings.media.image.maxHeight
+   Data type
+         pixels
+   Description
+         Sets the maximum height of images.
+   Default
+         *empty*
+
+
+.. _tslightbox:
+
+settings.media.image.lightbox
+"""""""""""""""""""""""""""""
+.. container:: table-row
+
+   Property
+         settings.media.image.lightbox
+   Data type
+         array of TypoScript properties
+   Description
+         Array of lightbox settings for images. By default the TypoScript Constants of *fluid_styled_content* are used.
+
+         | :typoscript:`class`: class-attribute for lightbox links
+         | :typoscript:`rel`: rel-attribute for lightbox links
+         | :typoscript:`width`: width of the enlarged media element
+         | :typoscript:`height`: height of the enlarged media element
+
+   Default
+         .. code-block:: typoscript
+
+            settings.media.image.lightbox {
+               class = {$styles.content.textmedia.linkWrap.lightboxCssClass}
+               rel = {$styles.content.textmedia.linkWrap.lightboxRelAttribute}
+               width = {$styles.content.textmedia.linkWrap.width}
+               height = {$styles.content.textmedia.linkWrap.height}
+            }
 
 
 PAGE object
