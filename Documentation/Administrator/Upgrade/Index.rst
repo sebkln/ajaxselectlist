@@ -21,6 +21,8 @@ As Version 3.x provides several new features, it's mandatory that you perform th
 #. Add *'Click-enlarge (image_zoom)'* permission for your editors
 #. If you want to use a lightbox within your option records, you'll have to extend the Ajax call. See :ref:`administrator-lightbox`
 
+Although EXT:ajaxselectlist now supports new media types (such as videos), your already used images are still properly linked in your option records.
+
 Adapt your templates
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -54,4 +56,4 @@ New iteration of media:
 
 .. tip::
 
-   Although EXT:ajaxselectlist now supports new media types (such as videos), your already used images are still properly linked in your option records.
+   To benefit from all new features, you should adopt the enhancements from the new Partial *Media.html*, which is based on fluid_styled_content.
