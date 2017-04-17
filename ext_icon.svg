@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="256px" height="256px" viewBox="0 0 256 256" enable-background="new 0 0 256 256" xml:space="preserve">
+<rect fill="#3564CA" width="256" height="256"/>
+<g>
+	<path fill="#FFFFFF" d="M32,176V48c0-8.8,7.2-16,16-16h160c8.8,0,16,7.2,16,16h16c0-17.6-14.4-32-32-32H48c-17.6,0-32,14.4-32,32
+		v128H32z"/>
+	<path fill="#FFFFFF" d="M224,80v128c0,8.8-7.2,16-16,16H48c-8.8,0-16-7.2-16-16H16c0,17.6,14.4,32,32,32h160c17.6,0,32-14.4,32-32
+		V80H224z"/>
+</g>
+<polygon fill="#FFFFFF" points="232,64 256,96 208,96 "/>
+<polygon fill="#FFFFFF" points="24,192 0,160 48,160 "/>
+<g>
+	<g>
+		<circle fill="#FFFFFF" cx="80" cy="176" r="16"/>
+		<circle fill="#FFFFFF" cx="80" cy="128" r="16"/>
+		<circle fill="#FFFFFF" cx="80" cy="80" r="16"/>
+	</g>
+	<rect x="112" y="64" fill="#FFFFFF" width="80" height="32"/>
+	<rect x="112" y="112" fill="#FFFFFF" width="80" height="32"/>
+	<rect x="112" y="160" fill="#FFFFFF" width="80" height="32"/>
+</g>
+</svg>
