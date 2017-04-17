@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="256px" height="256px" viewBox="0 0 256 256" enable-background="new 0 0 256 256" xml:space="preserve">
+<rect x="16" y="16" fill="#999999" width="240" height="240"/>
+<rect x="32" y="32" fill="#FFFFFF" width="208" height="208"/>
+<g>
+	<circle fill="#666666" cx="48" cy="48" r="48"/>
+</g>
+<g>
+	<circle fill="#FFFFFF" cx="48" cy="48" r="32"/>
+</g>
+<rect x="112" y="48" fill="#B9B9B9" width="112" height="32"/>
+<path fill="#B9B9B9" d="M224,112v16h-80v-16H224z M144,160h80v-16h-80V160z M144,192h80v-16h-80V192z M144,224h48v-16h-48V224z"/>
+<rect x="48" y="112" fill="#ABD7FF" width="80" height="112"/>
+<polygon fill="#5599FF" points="96,176 96,160 112,160 112,128 64,128 64,160 80,160 80,176 48,176 48,224 128,224 128,176 "/>
+</svg>

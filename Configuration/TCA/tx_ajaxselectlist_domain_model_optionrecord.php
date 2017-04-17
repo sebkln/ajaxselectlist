@@ -19,7 +19,7 @@ return [
             'endtime' => 'endtime',
         ],
         'searchFields' => 'title,image,text,',
-        'iconfile' => 'EXT:ajaxselectlist/Resources/Public/Icons/tx_ajaxselectlist_domain_model_optionrecord.gif'
+        'iconfile' => 'EXT:ajaxselectlist/Resources/Public/Icons/optionRecord.svg'
     ],
     'interface' => [
         'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, image, text, image_zoom',
