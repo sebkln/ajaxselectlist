@@ -6,7 +6,7 @@
 .. include:: ../../Includes.txt
 
 
-.. _administrator-update:
+.. _administrator-upgrade:
 
 Upgrade EXT:ajaxselectlist
 ==========================
@@ -55,8 +55,3 @@ New iteration of media:
 .. tip::
 
    Although EXT:ajaxselectlist now supports new media types (such as videos), your already used images are still properly linked in your option records.
-
-
-.. warning::
-
-	Breaking: When updating from a former version of ajaxselectlist, you'll have to adapt your customized template! You now must use a for-Viewhelper to iterate through the various media files. Don't forget to use the name inside the as-attribute in your inner variables. See Upgrade for more information.

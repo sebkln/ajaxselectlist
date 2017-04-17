@@ -44,11 +44,22 @@ To install the extension, perform the following steps:
 Configuration
 -------------
 
-After completing the above steps, the plugin and records can be created. The plugin will already load your records in the frontend.
+After completing the above steps, the plugin and records can be created.
+The plugin will already load your records in the frontend.
 
-However, you'll want to modify the Fluid templates to fit your design and needs. The :ref:`configuration` covers TypoScript settings and :ref:`configuration-templates`.
+However, you'll want to modify the Fluid templates to fit your design and needs.
+The :ref:`configuration` covers TypoScript settings and :ref:`configuration-templates`.
 
 .. _admin-subpages:
+
+
+.. warning::
+
+	Breaking: When updating from a former version of ajaxselectlist, you'll have to adapt your customized template!
+	You now must use a for-Viewhelper to iterate through the various media files.
+	Don't forget to use the name inside the as-attribute in your inner variables.
+	See :ref:`administrator-upgrade` for more information.
+
 
 Subpages
 --------
