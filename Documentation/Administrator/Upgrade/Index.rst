@@ -16,15 +16,28 @@ Upgrading from EXT:ajaxseleclist 1.0 or 2.x to 3.x
 
 As Version 3.x provides several new features, it's mandatory that you perform the following tasks:
 
-#. Add the new field for image zoom, either with the Install Tool's Database analyzer or by uninstalling and reinstalling the extension
-#. Adapt your templates (see below)
-#. Add *'Click-enlarge (image_zoom)'* permission for your editors
+#. Add the new field for image zoom (see :ref:`updatedatabase` below)
+#. Adapt your templates (see :ref:`adapttemplates` below)
+#. Add *'Click-enlarge (image_zoom)'* permission for your editors (in Backend usergroup's Access Lists)
 #. If you want to use a lightbox within your option records, you'll have to extend the Ajax call. See :ref:`administrator-lightbox`
 
 Although EXT:ajaxselectlist now supports new media types (such as videos), your already used images are still properly linked in your option records.
 
-Adapt your templates
-^^^^^^^^^^^^^^^^^^^^
+.. _updatedatabase:
+
+1. Update database
+^^^^^^^^^^^^^^^^^^
+
+You'll have to add the new field for image zoom. This can be achieved by any of these three options:
+
+#. This extension provides a convenient update script that you can start within the Extension Manager. One click - done.
+#. Open the Install Tool and use the Database analyzer
+#. Uninstall and reinstall this extension
+
+.. _adapttemplates:
+
+2. Adapt your templates
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Formerly used if-clause:
 """"""""""""""""""""""""
