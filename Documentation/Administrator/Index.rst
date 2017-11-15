@@ -25,19 +25,19 @@ To install the extension, perform the following steps:
 
 .. attention::
 
-   The Ajax request that loads the records depends on **jQuery**. You have to include jQuery in your website if not already done. This extension does not implement jQuery for you.
+	The Ajax request that loads the records depends on **jQuery**. You have to include jQuery in your website if not already done. This extension does not implement jQuery for you.
 
-   If you know JavaScript you can just use *XMLHttpRequest()* and ignore jQuery. The JavaScript is part of the *List.html* template.
+	If you know JavaScript you can just use *XMLHttpRequest()* and ignore jQuery. The JavaScript is part of the *List.html* template.
 
 .. figure:: ../Images/AdministratorManual/ExtensionManager.png
-   :alt: ajaxselectlist in the Extension Manager
+	:alt: ajaxselectlist in the Extension Manager
 
-   *ajaxselectlist* in the Extension Manager
+	*ajaxselectlist* in the Extension Manager
 
 .. figure:: ../Images/AdministratorManual/IncludeStaticTemplate.png
-   :alt: Include the static template
+	:alt: Include the static template
 
-   Include the static template
+	Include the static template
 
 .. _admin-configuration:
 
@@ -70,3 +70,4 @@ Subpages
 
 	Upgrade/Index
 	Lightbox/Index
+	RealURL/Index
