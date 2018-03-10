@@ -6,6 +6,7 @@ return [
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
+        'default_sortby' => 'ORDER BY title',
         'dividers2tabs' => true,
         'versioningWS' => true,
 
