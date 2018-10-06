@@ -8,8 +8,8 @@
 
 .. _administrator-realurl:
 
-Using EXT:ajaxselectlist with RealURL enabled
-=============================================
+Using EXT:ajaxselectlist with speaking URLs
+===========================================
 
 So you have successfully configured *ajaxselectlist*, then activated RealURL and now just get an error message?
 
@@ -56,3 +56,5 @@ Luckily there's an easy solution: Just adapt the Ajax call in template *List.htm
 		});
 		selectForm.trigger('change');
 	});
+
+.. note:: Starting with ajaxselectlist v4.0.0, the *List.html* template is already adapted. This also allows to work with the speaking URLs of TYPO3 v9.
