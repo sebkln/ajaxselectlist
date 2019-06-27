@@ -2,7 +2,7 @@
 
 ## Preface
 
-You can find a more detailed documentation including several screenshots and how-tos on [docs.typo3.org](https://docs.typo3.org/typo3cms/extensions/ajaxselectlist/) (HTML) and in the `Documentation/` folder (ReST).
+You can find a more detailed documentation including several screenshots and how-tos on [docs.typo3.org](https://docs.typo3.org/p/sebkln/ajaxselectlist/master/en-us/) (HTML) and in the `Documentation/` folder (ReST).
 
 
 ## What does it do?
