@@ -35,7 +35,7 @@ Select list with Ajax call
 		Sebastian Klein
 
 	:Email:
-		sebastian@sklein-medien.de
+		sebastian@sebkln.de
 
 	:License:
 		Open Publication License available from `www.opencontent.org/openpub/ <http://www.opencontent.org/openpub/>`_

@@ -4,7 +4,7 @@ namespace Sebkln\Ajaxselectlist;
 /*
  * This file is part of the package sebkln/ajaxselectlist
  *
- * Copyright (c) 2017 Sebastian Klein <sebastian@sklein-medien.de>
+ * Copyright (c) 2017 Sebastian Klein <sebastian@sebkln.de>
  *
  * For the full copyright and license information, please read the
  * LICENSE file that was distributed with this source code.

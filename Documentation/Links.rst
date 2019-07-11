@@ -21,4 +21,4 @@ Links
 	https://packagist.org/packages/sebkln/ajaxselectlist
 
 :Contact:
-	sebastian@sklein-medien.de
+	sebastian@sebkln.de
