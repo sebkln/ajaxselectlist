@@ -22,7 +22,7 @@ This extension provides a drop-down list which uses Ajax to load records into th
 
 ## Compatibility
 
-TYPO3 7.6.0 - 8.7.99
+TYPO3 8.7.0 - 9.5.99
 
 
 ## Installation
