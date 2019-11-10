@@ -22,8 +22,12 @@
     "typo3/cms-core": ">=8.7.0 <9.5.99"
   },
   "replace": {
-    "ajaxselectlist": "self.version",
     "typo3-ter/ajaxselectlist": "self.version"
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "ajaxselectlist"
+    }
   },
   "autoload": {
     "psr-4": {
