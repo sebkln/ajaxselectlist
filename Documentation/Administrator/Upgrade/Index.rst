@@ -34,6 +34,10 @@ You'll have to add the new field for image zoom. This can be achieved by any of 
 #. Open the Install Tool and use the Database analyzer
 #. Uninstall and reinstall this extension
 
+.. note::
+
+   The *image_zoom* update script was removed with ajaxselectlist 4.0.0.
+
 .. _adapttemplates:
 
 2. Adapt your templates
