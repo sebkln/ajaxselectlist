@@ -11,6 +11,18 @@
 Upgrade EXT:ajaxselectlist
 ==========================
 
+Upgrading to EXT:ajaxseleclist 4.0.0
+------------------------------------
+
+To restore multilanguage support in TYPO3 v9, I had to add a new form field to the *List.html* template.
+Since you have most likely customized this template, you will need to add the following field to the form as well:
+
+.. code-block:: html
+
+   <input type="hidden" name="id" value="{currentPageID}">
+
+This is a temporary workaround. A future version of this extension will use PSR-15 middlewares for the Ajax call.
+
 Upgrading from EXT:ajaxseleclist 1.0 or 2.x to 3.x
 --------------------------------------------------
 
