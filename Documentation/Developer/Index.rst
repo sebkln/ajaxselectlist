@@ -17,7 +17,7 @@ Developer Corner
 Ajax request
 ------------
 
-The jQuery ``ajax()`` method is used for the request. The script is part of the *List.html* template.
+The jQuery ``ajax()`` method is used for the request. The script is stored in an external file and rendered via the *List.html* template (``FooterAssets`` section).
 
 The result is loaded inside the div element ``#ajaxCallResult`` with a *fade* effect. After the website has fully loaded, the *change* event is triggered to load the content of the first select option.
 

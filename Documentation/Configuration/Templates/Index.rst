@@ -13,7 +13,7 @@ Changing Templates
 
 This extension provides you with basic Fluid templates. These are meant as examples, as you'll want to adapt the output to your website's design. As in every Extbase extension, the Fluid templates, partials and layouts are located in the directory ``Resources/Private/``.
 
-- ``List.html`` outputs the select menu and also contains the Ajax script.
+- ``List.html`` renders the select menu. It also contains the ``FooterAssets`` section which includes the JavaScript file just before the closing ``</body>`` tag.
 - ``AjaxCall.html`` displays the content of your records. It provides an example of how you can render the image.
 
 You can just copy this templates to your *fileadmin* directory (or even better, an extension that holds all your website's templates) and set the paths to the new location.

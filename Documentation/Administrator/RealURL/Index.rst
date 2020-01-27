@@ -18,7 +18,7 @@ The message should read as follows:
 | Page Not Found
 | Reason: Segment "index.php" was not a keyword for a postVarSet as expected on page with id=28.
 
-Luckily there's an easy solution: Just adapt the Ajax call in template *List.html*. Change ``url: 'index.php'`` to ``url: '/'``:
+Luckily there's an easy solution: you need to slightly adapt the Ajax call. Change ``url: 'index.php'`` to ``url: '/'``:
 
 .. code-block:: javascript
 	:emphasize-lines: 8
@@ -57,4 +57,4 @@ Luckily there's an easy solution: Just adapt the Ajax call in template *List.htm
 		selectForm.trigger('change');
 	});
 
-.. note:: Starting with ajaxselectlist v4.0.0, the *List.html* template is already adapted. This also allows to work with the speaking URLs of TYPO3 v9.
+.. note:: Starting with ajaxselectlist v4.0.0, the *List.html* template is already adapted. This will also work with the speaking URLs of TYPO3 v9 ('Routing').

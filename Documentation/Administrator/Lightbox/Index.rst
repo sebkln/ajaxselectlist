@@ -15,7 +15,7 @@ Out of the box, your lightbox most likely won't work with media inside your opti
 
 That's because every time you select an option, the DOM (Document Object Model) will change. Your lightbox was initialized after document ready, though, and cannot know about these modifications.
 
-Using the provided Ajax call in template *List.html*, you'll have to call your lightbox again inside the *success* function.
+Using the provided Ajax call, you'll have to call your lightbox again inside the *success* function.
 
 Below is an example using the lightbox `magnific popup <http://dimsemenov.com/plugins/magnific-popup/>`_:
 
