@@ -1,4 +1,4 @@
-﻿.. ==================================================
+.. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
@@ -55,7 +55,7 @@ The :ref:`configuration` covers TypoScript settings and :ref:`configuration-temp
 
 .. warning::
 
-	Breaking: When updating from a former version of ajaxselectlist, you'll have to adapt your customized template!
+	Breaking: If you update from version 1.0 or 2.x of ajaxselectlist, you'll have to adapt your customized template!
 	You now must use a for-Viewhelper to iterate through the various media files.
 	Don't forget to use the name inside the as-attribute in your inner variables.
 	See :ref:`administrator-upgrade` for more information.
