@@ -8,7 +8,6 @@
     
     Explanation:
     - As you can now use more than one media asset, you'll have to use f:for to get all related files.
-    - If a description is set for a media file, a HTML5 figure tag is used, otherwise a div class.
     - With f:switch we compare the respective file type: an image, audio or video.
       Depending on that, one of the sections further below is rendered.
     
@@ -22,38 +21,23 @@
 </f:comment>
 
 <f:for each="{optionRecord.image}" as="falmedia">
-    <f:if condition="{falmedia.originalResource.description}">
-        <f:then>
-            <figure>
-        </f:then>
-        <f:else>
-            <div class="media">
-        </f:else>
-    </f:if>
-    
-    <f:switch expression="{falmedia.originalResource.type}">
-        <f:case value="3">
-            <f:render section="audioType" arguments="{_all}"/>
-        </f:case>
-        <f:case value="4">
-            <f:render section="videoType" arguments="{_all}"/>
-        </f:case>
-        <f:defaultCase>
-            <f:render section="imageType" arguments="{_all}"/>
-        </f:defaultCase>
-    </f:switch>
-    
-    <f:if condition="{falmedia.originalResource.description}">
-        <f:then>
-            <figcaption>
-                {falmedia.originalResource.description}
-            </figcaption>
-            </figure>
-        </f:then>
-        <f:else>
-            </div>
-        </f:else>
-    </f:if>
+    <figure class="media">
+        <f:switch expression="{falmedia.originalResource.type}">
+            <f:case value="3">
+                <f:render section="audioType" arguments="{_all}"/>
+            </f:case>
+            <f:case value="4">
+                <f:render section="videoType" arguments="{_all}"/>
+            </f:case>
+            <f:defaultCase>
+                <f:render section="imageType" arguments="{_all}"/>
+            </f:defaultCase>
+        </f:switch>
+        
+        <figcaption>
+            {falmedia.originalResource.description}
+        </figcaption>
+    </figure>
 </f:for>
 
 <f:section name="imageType">
