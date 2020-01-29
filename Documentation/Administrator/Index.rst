@@ -25,9 +25,10 @@ To install the extension, perform the following steps:
 
 .. attention::
 
-	The Ajax request that loads the records depends on **jQuery**. You have to include jQuery in your website if not already done. This extension does not implement jQuery for you.
+	The **default** Ajax request that loads the records depends on **jQuery**. You have to include the jQuery library in your website
+	if not already done. This extension does not implement jQuery for you.
 
-	If you know JavaScript you can just use *XMLHttpRequest()* and ignore jQuery.
+	If you don't want to use jQuery, you can :ref:`switch <settings.useAjaxwithJQuery>` to the **vanilla JavaScript solution**. This will use an *XMLHttpRequest()*.
 
 .. figure:: ../Images/AdministratorManual/ExtensionManager.png
 	:alt: ajaxselectlist in the Extension Manager

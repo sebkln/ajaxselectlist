@@ -27,7 +27,7 @@ This extension provides a drop-down list which uses Ajax to load records into th
 - easy installation
 - fully functional, but basic Fluid templates without further styling, **because:**
 - **the templates are meant for customization! Simply adapt them to your specific design and needs.**
-- depends on jQuery (the Ajax request could be rewritten to vanilla JavaScript, though)
+- Ajax request possible with both `jQuery.ajax() <https://api.jquery.com/jquery.ajax/>`__ and `XMLHttpRequest() <https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest>`__.
 
 .. _screenshots:
 

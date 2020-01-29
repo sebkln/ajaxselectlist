@@ -14,6 +14,7 @@
                         options="{optionRecords}"
                         optionLabelField="title"
                         class="ajaxFormOption"
+                        id="ajaxselectlist-select"
                         name="optionRecord"/>
                 
                 <f:form.hidden name="action" value="ajaxCall"/>
@@ -32,9 +33,16 @@
     <div id="ajaxCallResult"></div>
     
     
-    <f:comment><!-- Load external JavaScript file just before the closing </body> tag. --></f:comment>
+    <f:comment><!-- Load one of the external JavaScript files just before the closing </body> tag. --></f:comment>
     <f:section name="FooterAssets">
-        <script src="{f:uri.resource(path: 'JavaScript/ajax.jquery.js')}"></script>
+        <f:if condition="{settings.useAjaxwithJQuery} == 1">
+            <f:then>
+                <script src="{f:uri.resource(path: 'JavaScript/ajax.jquery.js')}"></script>
+            </f:then>
+            <f:else>
+                <script src="{f:uri.resource(path: 'JavaScript/ajax.vanilla.js')}"></script>
+            </f:else>
+        </f:if>
     </f:section>
 
 </f:section>

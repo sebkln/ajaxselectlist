@@ -23,6 +23,7 @@ plugin.tx_ajaxselectlist {
 
     settings {
         typeNum = {$plugin.tx_ajaxselectlist.settings.typeNum}
+        useAjaxwithJQuery = {$plugin.tx_ajaxselectlist.settings.useAjaxwithJQuery}
 
         media {
             image {

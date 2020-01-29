@@ -17,7 +17,7 @@ This extension provides a drop-down list which uses Ajax to load records into th
 * easy installation
 * fully functional, but basic Fluid templates without further styling, because:
 * the templates are meant for customization! Simply adapt them to your specific design and needs.
-* depends on jQuery (the Ajax request could be rewritten to vanilla JavaScript, though)
+* Ajax request possible with both [jQuery.ajax()](https://api.jquery.com/jquery.ajax/) and [XMLHttpRequest()](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest).
 
 
 ## Compatibility
@@ -34,5 +34,6 @@ To install the extension, perform the following steps:
 3. Include the static template Select list with Ajax call (ajaxselectlist) into your TypoScript template
 4. Add permissions for the plugin and records for your editors
 
-> Note: The Ajax request that loads the records depends on jQuery. You have to include jQuery in your website if not already done. This extension does not implement jQuery for you.
-> If you know JavaScript you can just use XMLHttpRequest() and ignore jQuery. The JavaScript is part of the List.html template.
+> Note: You can choose between an Ajax request with jQuery or vanilla JavaScript (*XMLHttpRequest*). **Default** is the jQuery solution.
+> You'll need to include the jQuery library yourself!
+> Please refer to the full manual for details how to switch to the XMLHttpRequest.

@@ -18,19 +18,20 @@ Properties
 
 .. container:: ts-properties
 
-	================================ ================================================= =============================================================
+	================================ ================================================= ====================================================================
 	Property                         Data type                                         Default
-	================================ ================================================= =============================================================
+	================================ ================================================= ====================================================================
 	view.templateRootPaths_          array of file paths with :ref:`stdWrap <stdwrap>` *array with fallback path and constant value*
 	view.partialRootPaths_           array of file paths with :ref:`stdWrap <stdwrap>` *array with fallback path and constant value*
 	view.layoutRootPaths_            array of file paths with :ref:`stdWrap <stdwrap>` *array with fallback path and constant value*
 	persistence.storagePid_          :ref:`t3tsref:data-type-page-id`                  :typoscript:`{$plugin.tx_ajaxselectlist.settings.storagePid}`
 	persistence.recursive_           :ref:`t3tsref:data-type-positive-integer`         :typoscript:`{$plugin.tx_ajaxselectlist.settings.recursive}`
 	settings.typeNum_                :ref:`t3tsref:data-type-positive-integer`         :typoscript:`{$plugin.tx_ajaxselectlist.settings.typeNum}`
+	settings.useAjaxwithJQuery_      :ref:`t3tsref:data-type-boolean`                  :typoscript:`{$plugin.tx_ajaxselectlist.settings.useAjaxwithJQuery}`
 	settings.media.image.maxWidth_   pixels                                            :typoscript:`{$styles.content.textmedia.maxW}`
 	settings.media.image.maxHeight_  pixels                                            *empty*
 	settings.media.image.lightbox_   array of TypoScript properties                    *multiple Typoscript Constants from fluid_styled_content*
-	================================ ================================================= =============================================================
+	================================ ================================================= ====================================================================
 
 Property details
 ^^^^^^^^^^^^^^^^
@@ -147,6 +148,25 @@ settings.typeNum
            Currently this setting is only used in the Fluid ``f:form`` Viewhelper. If you have to change it, you'll have to set the new typeNum in the ``PAGE`` object separately. This may be fixed in future versions.
    Default
          :typoscript:`{$plugin.tx_ajaxselectlist.settings.typeNum}`
+
+.. _tsuseAjaxwithJQuery:
+
+settings.useAjaxwithJQuery
+""""""""""""""""""""""""""
+.. container:: table-row
+
+   Property
+         settings.useAjaxwithJQuery
+   Data type
+         boolean
+   Description
+         This setting lets you choose one of the two provided JavaScript files (*ajax.jquery.js* or *ajax.vanilla.js*).
+
+         - If active, `jQuery.ajax() <https://api.jquery.com/jquery.ajax/>`__ is used. You'll need to provide the jQuery library yourself!
+         - If disabled, an `XMLHttpRequest() <https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest>`__ is used (vanilla JavaScript).
+           The provided script currently only works in modern browsers (no Internet Explorer).
+   Default
+         :typoscript:`{$plugin.tx_ajaxselectlist.settings.useAjaxwithJQuery}`
 
 
 .. _tsmaxWidth:

@@ -24,6 +24,7 @@ TypoScript Constants Reference
 	persistence.storagePid_     :ref:`t3tsref:data-type-page-id`          *empty*
 	persistence.recursive_      :ref:`t3tsref:data-type-positive-integer` *empty*
 	settings.typeNum_           :ref:`t3tsref:data-type-positive-integer` 427590
+	settings.useAjaxwithJQuery_ :ref:`t3tsref:data-type-boolean`          1
 	=========================== ========================================= ========
 
 Property details
@@ -126,3 +127,22 @@ settings.typeNum
            Currently this setting is only used in the Fluid `f:form` Viewhelper. If you have to change it, you'll have to set the new typeNum in the ``PAGE`` object separately. This may be fixed in future versions.
    Default
          :typoscript:`427590`
+
+.. _settings.useAjaxwithJQuery:
+
+settings.useAjaxwithJQuery
+""""""""""""""""""""""""""
+.. container:: table-row
+
+   Property
+         settings.useAjaxwithJQuery
+   Data type
+         boolean
+   Description
+         This setting lets you choose one of the two provided JavaScript files (*ajax.jquery.js* or *ajax.vanilla.js*).
+
+         - If active, `jQuery.ajax() <https://api.jquery.com/jquery.ajax/>`__ is used. You'll need to provide the jQuery library yourself!
+         - If disabled, an `XMLHttpRequest() <https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest>`__ is used (vanilla JavaScript).
+           The provided script currently only works in modern browsers (no Internet Explorer).
+   Default
+         :typoscript:`1`
