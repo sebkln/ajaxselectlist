@@ -11,12 +11,12 @@ plugin.tx_ajaxselectlist {
     persistence {
         # cat=plugin.tx_ajaxselectlist//1; type=string; label=Storage folder(s): Comma-separated list of pages (UIDs) which contain records for this extension.
         storagePid =
-        # cat=plugin.tx_ajaxselectlist//2; type=int+; label=Recursive mode: The number of subpage levels which are searched for records. Starting point are the page(s) that were set with storagePid or in the plugin form field Record Storage Page.
+        # cat=plugin.tx_ajaxselectlist//2; type=string; label=Recursive mode: The number of subpage levels which are searched for records. Starting point are the page(s) that were set with storagePid or in the plugin form field Record Storage Page.
         recursive =
     }
 
     settings {
-        # cat=plugin.tx_ajaxselectlist//3; type=int+; label=typeNum for AJAX call 
+        # cat=plugin.tx_ajaxselectlist//3; type=string; label=typeNum for AJAX call 
         typeNum = 427590 
         # cat=plugin.tx_ajaxselectlist//4; type=boolean; label=Use jQuery for the Ajax call?: If active, jQuery.ajax() is used. You'll need to provide the jQuery library yourself. If disabled, an XMLHttpRequest() is used (vanilla JavaScript).
         useAjaxwithJQuery = 1
